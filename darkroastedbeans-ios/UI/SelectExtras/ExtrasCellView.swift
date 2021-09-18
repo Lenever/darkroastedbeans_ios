@@ -8,27 +8,34 @@
 import SwiftUI
 
 struct ExtrasCellView: View {
+    var extra: String
+    @State var isChecked = true
+    
     var body: some View {
-        HStack {
-            Text("Soy")
-                .foregroundColor(.white)
-                .padding()
-            
-            Spacer()
-            
-            Image(systemName: "checkmark.circle")
-                .font(.system(size: 16, weight: .regular))
-                .padding()
+        Button(action:{
+            isChecked.toggle()
+        }) {
+            HStack {
+                Text(extra)
+                    .foregroundColor(.white)
+                    .padding()
+                
+                Spacer()
+                
+                Image(systemName: isChecked ? "checkmark.circle" : "circle")
+                    .font(.system(size: 16, weight: .regular))
+                    .padding()
+            }
+            .foregroundColor(.white)
+            .background(Color("darkLemonGreen"))
+            .cornerRadius(10)
         }
-        .foregroundColor(.white)
-        .background(Color("darkLemonGreen"))
-        .padding(.horizontal)
-        .cornerRadius(10)
     }
 }
 
 struct ExtrasCellView_Previews: PreviewProvider {
     static var previews: some View {
-        ExtrasCellView()
+        ExtrasCellView(extra: "Soy")
+            .previewLayout(.sizeThatFits)
     }
 }

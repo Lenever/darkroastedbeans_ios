@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ExtraDetailsView: View {
-    @State var showDetails = true
+    @State var showDetails = false
+    var extra: String
+    var extraTypes = ["Dairy", "Soy", "Oats"]
     
     var body: some View {
         VStack {
@@ -16,27 +18,36 @@ struct ExtraDetailsView: View {
                 showDetails.toggle()
             }) {
                 VStack {
-                    CellView(coffeeStyle: "Milk")
+                    CellView(itemName: extra)
                     
                     if showDetails {
                         VStack {
-                            VStack {
-                                Divider()
-                                    .background(Color.white)
-                                    .padding()
+                            Divider()
+                                .frame(height: 1)
+                                .background(Color.white)
+                                .padding(.bottom, 5)
+                            
+                            VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
+                                ForEach(extraTypes, id: \.self) { extra in
+                                    ExtrasCellView(extra: extra)
+                                }
                             }
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         }
+                        .padding(.horizontal,25)
+                        .padding(.bottom, 25)
                     }
                 }
             }
         }
         .background(Color("lemonGreen"))
+        .cornerRadius(10)
     }
 }
 
 struct ExtraDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ExtraDetailsView()
+        ExtraDetailsView(extra: "Milk")
             .previewLayout(.sizeThatFits)
     }
 }

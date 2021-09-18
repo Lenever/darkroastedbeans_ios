@@ -32,7 +32,7 @@ struct SelectSizeView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
                     ForEach(coffeeSizes, id: \.self) { coffee in
-                        CellView(coffeeStyle: coffee)
+                        CellView(itemName: coffee)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
