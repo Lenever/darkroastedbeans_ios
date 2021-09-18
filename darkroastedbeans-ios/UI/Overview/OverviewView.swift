@@ -46,6 +46,7 @@ struct OverviewView: View {
                         VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
                             ForEach(extraTypes, id: \.self) { extra in
                                 ExtrasCellView(extra: extra)
+                                    .disabled(true)
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -63,6 +64,7 @@ struct OverviewView: View {
                             
                             ForEach(extraTypes, id: \.self) { extra in
                                 ExtrasCellView(extra: extra)
+                                    .disabled(true)
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
