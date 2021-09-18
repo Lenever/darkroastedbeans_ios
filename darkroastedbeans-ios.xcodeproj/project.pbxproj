@@ -13,6 +13,7 @@
 		04C07F2226F5D452000F25E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C07F2126F5D452000F25E9 /* Preview Assets.xcassets */; };
 		04C07F2D26F5D453000F25E9 /* darkroastedbeans_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F2C26F5D453000F25E9 /* darkroastedbeans_iosTests.swift */; };
 		04C07F3826F5D453000F25E9 /* darkroastedbeans_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F3726F5D453000F25E9 /* darkroastedbeans_iosUITests.swift */; };
+		04C07F4826F5DB87000F25E9 /* TabMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F4726F5DB87000F25E9 /* TabMachineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		04C07F3326F5D453000F25E9 /* darkroastedbeans-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darkroastedbeans-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C07F3726F5D453000F25E9 /* darkroastedbeans_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = darkroastedbeans_iosUITests.swift; sourceTree = "<group>"; };
 		04C07F3926F5D453000F25E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C07F4726F5DB87000F25E9 /* TabMachineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMachineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		04C07F1926F5D44F000F25E9 /* darkroastedbeans-ios */ = {
 			isa = PBXGroup;
 			children = (
+				04C07F4526F5DA60000F25E9 /* UI */,
 				04C07F1A26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift */,
 				04C07F1C26F5D44F000F25E9 /* ContentView.swift */,
 				04C07F1E26F5D452000F25E9 /* Assets.xcassets */,
@@ -128,6 +131,22 @@
 				04C07F3926F5D453000F25E9 /* Info.plist */,
 			);
 			path = "darkroastedbeans-iosUITests";
+			sourceTree = "<group>";
+		};
+		04C07F4526F5DA60000F25E9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				04C07F4626F5DB40000F25E9 /* TabMachine */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		04C07F4626F5DB40000F25E9 /* TabMachine */ = {
+			isa = PBXGroup;
+			children = (
+				04C07F4726F5DB87000F25E9 /* TabMachineView.swift */,
+			);
+			path = TabMachine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C07F4826F5DB87000F25E9 /* TabMachineView.swift in Sources */,
 				04C07F1D26F5D44F000F25E9 /* ContentView.swift in Sources */,
 				04C07F1B26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift in Sources */,
 			);
