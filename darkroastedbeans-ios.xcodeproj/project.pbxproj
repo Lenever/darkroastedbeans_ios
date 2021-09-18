@@ -17,6 +17,8 @@
 		04C07F4D26F5E9E2000F25E9 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F4C26F5E9E2000F25E9 /* CellView.swift */; };
 		04C07F4F26F5F668000F25E9 /* SetupConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F4E26F5F668000F25E9 /* SetupConfiguration.swift */; };
 		04C07F5226F6058B000F25E9 /* SelectSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F5126F6058B000F25E9 /* SelectSizeView.swift */; };
+		04C07F5526F619B5000F25E9 /* ExtraDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F5426F619B5000F25E9 /* ExtraDetailsView.swift */; };
+		04C07F5726F62259000F25E9 /* ExtrasCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F5626F62259000F25E9 /* ExtrasCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		04C07F4C26F5E9E2000F25E9 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		04C07F4E26F5F668000F25E9 /* SetupConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupConfiguration.swift; sourceTree = "<group>"; };
 		04C07F5126F6058B000F25E9 /* SelectSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSizeView.swift; sourceTree = "<group>"; };
+		04C07F5426F619B5000F25E9 /* ExtraDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraDetailsView.swift; sourceTree = "<group>"; };
+		04C07F5626F62259000F25E9 /* ExtrasCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrasCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 		04C07F4526F5DA60000F25E9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				04C07F5326F61961000F25E9 /* SelectExtras */,
 				04C07F5026F6050B000F25E9 /* SelectSize */,
 				04C07F4926F5E61D000F25E9 /* SelectStyle */,
 				04C07F4626F5DB40000F25E9 /* TabMachine */,
@@ -172,6 +177,15 @@
 				04C07F5126F6058B000F25E9 /* SelectSizeView.swift */,
 			);
 			path = SelectSize;
+			sourceTree = "<group>";
+		};
+		04C07F5326F61961000F25E9 /* SelectExtras */ = {
+			isa = PBXGroup;
+			children = (
+				04C07F5426F619B5000F25E9 /* ExtraDetailsView.swift */,
+				04C07F5626F62259000F25E9 /* ExtrasCellView.swift */,
+			);
+			path = SelectExtras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +318,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C07F4B26F5E633000F25E9 /* SelectStyleView.swift in Sources */,
+				04C07F5726F62259000F25E9 /* ExtrasCellView.swift in Sources */,
 				04C07F4D26F5E9E2000F25E9 /* CellView.swift in Sources */,
 				04C07F4826F5DB87000F25E9 /* TabMachineView.swift in Sources */,
 				04C07F4F26F5F668000F25E9 /* SetupConfiguration.swift in Sources */,
 				04C07F1B26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift in Sources */,
 				04C07F5226F6058B000F25E9 /* SelectSizeView.swift in Sources */,
+				04C07F5526F619B5000F25E9 /* ExtraDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
