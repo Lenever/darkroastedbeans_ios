@@ -11,7 +11,7 @@ import SwiftUI
 struct darkroastedbeans_iosApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabMachineView()
         }
     }
 }

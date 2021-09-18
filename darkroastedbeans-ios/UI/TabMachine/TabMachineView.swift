@@ -9,42 +9,45 @@ import SwiftUI
 
 struct TabMachineView: View {
     var body: some View {
-        VStack {
+        NavigationView {
             VStack {
-                HStack {
-                    Text("Dark Roasted Beans")
-                        .font(.system(size: 16, weight: .bold))
+                VStack {
+                    HStack {
+                        Text("Dark Roasted Beans")
+                            .font(.system(size: 16, weight: .bold))
+                        
+                        Spacer()
+                    }
                     
-                    Spacer()
+                    HStack {
+                        Text("Tab the machine to start")
+                            .font(.system(size: 24, weight: .regular))
+                        
+                        Spacer()
+                    }
                 }
+                .padding()
+                
+                Spacer()
+                
+                Image("coffeeMachine")
+                    .resizable()
+                    .scaledToFit()
+                
                 
                 HStack {
-                    Text("Tab the machine to start")
-                        .font(.system(size: 24, weight: .regular))
+                    Text("How does this work")
+                        .underline()
+                        .padding()
                     
                     Spacer()
                 }
-            }
-            .padding()
-            
-            Spacer()
-            
-            Image("coffeeMachine")
-                .resizable()
-                .scaledToFit()
-            
-            
-            HStack {
-                Text("How does this work")
-                    .underline()
-                    .padding()
+                .padding(.bottom, 50)
                 
                 Spacer()
             }
-            .padding(.bottom, 50)
-            
-            Spacer()
         }
+        .navigationBarHidden(true)
     }
 }
 
