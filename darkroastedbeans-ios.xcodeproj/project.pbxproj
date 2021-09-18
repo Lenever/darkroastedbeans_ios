@@ -15,6 +15,8 @@
 		04C07F4826F5DB87000F25E9 /* TabMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F4726F5DB87000F25E9 /* TabMachineView.swift */; };
 		04C07F4B26F5E633000F25E9 /* SelectStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F4A26F5E633000F25E9 /* SelectStyleView.swift */; };
 		04C07F4D26F5E9E2000F25E9 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F4C26F5E9E2000F25E9 /* CellView.swift */; };
+		04C07F4F26F5F668000F25E9 /* SetupConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F4E26F5F668000F25E9 /* SetupConfiguration.swift */; };
+		04C07F5226F6058B000F25E9 /* SelectSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F5126F6058B000F25E9 /* SelectSizeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		04C07F4726F5DB87000F25E9 /* TabMachineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMachineView.swift; sourceTree = "<group>"; };
 		04C07F4A26F5E633000F25E9 /* SelectStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStyleView.swift; sourceTree = "<group>"; };
 		04C07F4C26F5E9E2000F25E9 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		04C07F4E26F5F668000F25E9 /* SetupConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupConfiguration.swift; sourceTree = "<group>"; };
+		04C07F5126F6058B000F25E9 /* SelectSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSizeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				04C07F4526F5DA60000F25E9 /* UI */,
 				04C07F1A26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift */,
+				04C07F4E26F5F668000F25E9 /* SetupConfiguration.swift */,
 				04C07F1E26F5D452000F25E9 /* Assets.xcassets */,
 				04C07F2326F5D452000F25E9 /* Info.plist */,
 				04C07F2026F5D452000F25E9 /* Preview Content */,
@@ -137,6 +142,7 @@
 		04C07F4526F5DA60000F25E9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				04C07F5026F6050B000F25E9 /* SelectSize */,
 				04C07F4926F5E61D000F25E9 /* SelectStyle */,
 				04C07F4626F5DB40000F25E9 /* TabMachine */,
 			);
@@ -158,6 +164,14 @@
 				04C07F4C26F5E9E2000F25E9 /* CellView.swift */,
 			);
 			path = SelectStyle;
+			sourceTree = "<group>";
+		};
+		04C07F5026F6050B000F25E9 /* SelectSize */ = {
+			isa = PBXGroup;
+			children = (
+				04C07F5126F6058B000F25E9 /* SelectSizeView.swift */,
+			);
+			path = SelectSize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +306,9 @@
 				04C07F4B26F5E633000F25E9 /* SelectStyleView.swift in Sources */,
 				04C07F4D26F5E9E2000F25E9 /* CellView.swift in Sources */,
 				04C07F4826F5DB87000F25E9 /* TabMachineView.swift in Sources */,
+				04C07F4F26F5F668000F25E9 /* SetupConfiguration.swift in Sources */,
 				04C07F1B26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift in Sources */,
+				04C07F5226F6058B000F25E9 /* SelectSizeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

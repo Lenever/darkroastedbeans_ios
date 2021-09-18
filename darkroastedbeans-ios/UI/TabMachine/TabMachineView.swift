@@ -26,6 +26,7 @@ struct TabMachineView: View {
                         Spacer()
                     }
                 }
+                .padding(.top, 50)
                 .padding()
                 
                 Spacer()
@@ -46,8 +47,9 @@ struct TabMachineView: View {
                 
                 Spacer()
             }
+            .navigationBarHidden(true)
+            .ignoresSafeArea()
         }
-        .navigationBarHidden(true)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  SelectStyleView.swift
+//  SelectSizeView.swift
 //  darkroastedbeans-ios
 //
 //  Created by Ikechukwu Onuorah on 18/09/2021.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SelectStyleView: View {
-    var coffeeTypes = ["Lungo", "Cappuccino", "Espresso"]
+struct SelectSizeView: View {
+    var coffeeSizes = ["Small", "Medium", "Large"]
     
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct SelectStyleView: View {
                 }
                 
                 HStack {
-                    Text("Select your style")
+                    Text("Select your size")
                         .font(.system(size: 24, weight: .regular))
                     
                     Spacer()
@@ -31,7 +31,7 @@ struct SelectStyleView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
-                    ForEach(coffeeTypes, id: \.self) { coffee in
+                    ForEach(coffeeSizes, id: \.self) { coffee in
                         CellView(coffeeStyle: coffee)
                     }
                 }
@@ -40,11 +40,21 @@ struct SelectStyleView: View {
             
             Spacer()
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    
+                }) {
+                    Text("Brew with Lex")
+                        .font(.system(size: 16, weight: .bold))
+                }
+            }
+        }
     }
 }
 
-struct SelectStyleView_Previews: PreviewProvider {
+struct SelectSizeView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectStyleView()
+        SelectSizeView()
     }
 }

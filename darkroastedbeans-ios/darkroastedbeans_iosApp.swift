@@ -14,4 +14,8 @@ struct darkroastedbeans_iosApp: App {
             TabMachineView()
         }
     }
+    
+    init() {
+        configureUIKitAppearanceForApp()
+    }
 }
