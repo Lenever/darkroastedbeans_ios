@@ -29,6 +29,7 @@
 		04C07F6D26F67914000F25E9 /* CoffeeExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F6C26F67914000F25E9 /* CoffeeExtra.swift */; };
 		04C07F6F26F67946000F25E9 /* Subselection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F6E26F67946000F25E9 /* Subselection.swift */; };
 		04C07F7126F679F6000F25E9 /* CoffeeMachineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F7026F679F6000F25E9 /* CoffeeMachineRepository.swift */; };
+		04C07F7326F67C66000F25E9 /* TabMachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F7226F67C66000F25E9 /* TabMachineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		04C07F6C26F67914000F25E9 /* CoffeeExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeExtra.swift; sourceTree = "<group>"; };
 		04C07F6E26F67946000F25E9 /* Subselection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subselection.swift; sourceTree = "<group>"; };
 		04C07F7026F679F6000F25E9 /* CoffeeMachineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMachineRepository.swift; sourceTree = "<group>"; };
+		04C07F7226F67C66000F25E9 /* TabMachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMachineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				04C07F4726F5DB87000F25E9 /* TabMachineView.swift */,
+				04C07F7226F67C66000F25E9 /* TabMachineViewModel.swift */,
 			);
 			path = TabMachine;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				04C07F5526F619B5000F25E9 /* ExtraDetailsView.swift in Sources */,
 				04C07F6126F6715A000F25E9 /* APIClient.swift in Sources */,
 				04C07F6F26F67946000F25E9 /* Subselection.swift in Sources */,
+				04C07F7326F67C66000F25E9 /* TabMachineViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

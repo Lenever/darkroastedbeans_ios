@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabMachineView: View {
+    @ObservedObject var viewModel = TabMachineViewModel()
+
     var body: some View {
         NavigationView {
             VStack {
