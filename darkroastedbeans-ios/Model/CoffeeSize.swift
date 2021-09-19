@@ -9,7 +9,14 @@ import Foundation
 
 // MARK: - Size
 struct CoffeeSize: Codable {
-    let id, name: String
+    static var example = CoffeeSize(
+        id: "60ba3368c45ecee5d77a016b",
+        name: "Venti",
+        v: nil
+    )
+
+    let id: String
+    let name: String
     let v: Int?
     
     enum CodingKeys: String, CodingKey {

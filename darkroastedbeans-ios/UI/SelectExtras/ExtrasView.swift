@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ExtrasView: View {
+    @ObservedObject var viewModel: ExtrasViewModel
     var extras = ["Milk", "Sugar"]
     
     var body: some View {
@@ -26,11 +27,11 @@ struct ExtrasView: View {
             
             Spacer()
             
-            NavigationLink(destination: OverviewView()) {
+            NavigationLink(destination: OverviewView(viewModel: OverviewViewModel(coffeeMachine: viewModel.coffeeMachine))) {
                 Footer(footer: "Confrim your coffee")
             }
             .padding()
-            .padding(.bottom, 100)
+            .padding(.bottom, 40)
         }
         .foregroundColor(.white)
         .edgesIgnoringSafeArea(.all)
@@ -40,6 +41,6 @@ struct ExtrasView: View {
 
 struct ExtrasView_Previews: PreviewProvider {
     static var previews: some View {
-        ExtrasView()
+        ExtrasView(viewModel: ExtrasViewModel(coffeeMachine: CoffeeMachine.example, selectedCoffeeType: CoffeeType.example))
     }
 }

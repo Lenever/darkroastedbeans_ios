@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct SelectStyleView: View {
-    var coffeeTypes = ["Lungo", "Cappuccino", "Espresso"]
-    
+    @ObservedObject var viewModel: SelectStyleViewModel
+        
     var body: some View {
         VStack {            
             Header(header: "Select your style")
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
-                    ForEach(coffeeTypes, id: \.self) { coffee in
-                        NavigationLink(destination: SelectSizeView()) {
-                            CellView(itemName: coffee)
+                    ForEach(viewModel.coffeeMachine.types) { coffeeType in
+                        NavigationLink(
+                            destination: SelectSizeView(
+                                viewModel: SelectSizeViewModel(
+                                    coffeeMachine: viewModel.coffeeMachine,
+                                    selectedCoffeeType: coffeeType
+                                )
+                            )
+                        ) {
+                            CellView(itemName: coffeeType.name)
                         }
                     }
                 }
@@ -36,6 +43,6 @@ struct SelectStyleView: View {
 
 struct SelectStyleView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectStyleView()
+        SelectStyleView(viewModel: SelectStyleViewModel(coffeeMachine: CoffeeMachine.example))
     }
 }

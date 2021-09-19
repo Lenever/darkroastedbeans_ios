@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectSizeView: View {
-    var coffeeSizes = ["Small", "Medium", "Large"]
+    @ObservedObject var viewModel: SelectSizeViewModel
     
     var body: some View {
         VStack {
@@ -16,9 +16,16 @@ struct SelectSizeView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
-                    ForEach(coffeeSizes, id: \.self) { coffee in
-                        NavigationLink(destination: ExtrasView()) {
-                            CellView(itemName: coffee)
+                    ForEach(viewModel.coffeeSizes, id: \.self) { coffeeSize in
+                        NavigationLink(
+                            destination: ExtrasView(
+                                viewModel: ExtrasViewModel(
+                                    coffeeMachine: viewModel.coffeeMachine,
+                                    selectedCoffeeType: viewModel.selectedCoffeeType
+                                )
+                            )
+                        ) {
+                            CellView(itemName: coffeeSize)
                         }
                     }
                 }
@@ -36,6 +43,6 @@ struct SelectSizeView: View {
 
 struct SelectSizeView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectSizeView()
+        SelectSizeView(viewModel: SelectSizeViewModel(coffeeMachine: CoffeeMachine.example, selectedCoffeeType: CoffeeType.example))
     }
 }

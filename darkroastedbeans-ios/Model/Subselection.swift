@@ -9,7 +9,13 @@ import Foundation
 
 // MARK: - Subselection
 struct Subselection: Codable {
-    let id, name: String
+    static var example = Subselection(
+        id: "60ba349a869d7a04642b41f4",
+        name: "Cow"
+    )
+    
+    let id: String
+    let name: String
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"

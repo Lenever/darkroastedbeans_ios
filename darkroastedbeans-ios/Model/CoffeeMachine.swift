@@ -9,8 +9,15 @@ import Foundation
 
 // MARK: - CoffeeMachine
 struct CoffeeMachine: Codable {
+    static var example = CoffeeMachine(
+        id: "60ba1ab72e35f2d9c786c610",
+        types: [CoffeeType.example],
+        sizes: [CoffeeSize.example],
+        extras: [CoffeeExtra.example]
+    )
+
     let id: String
-    let types: [CoffeeTypes]
+    let types: [CoffeeType]
     let sizes: [CoffeeSize]
     let extras: [CoffeeExtra]
 

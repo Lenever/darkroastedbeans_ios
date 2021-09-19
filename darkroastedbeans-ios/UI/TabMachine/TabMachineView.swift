@@ -34,12 +34,11 @@ struct TabMachineView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: SelectStyleView()) {
+                NavigationLink(destination: SelectStyleView(viewModel: SelectStyleViewModel(coffeeMachine: viewModel.coffeeMachine ?? CoffeeMachine.example))) {
                     Image("coffeeMachine")
                         .resizable()
                         .scaledToFit()
                 }
-                
                 
                 HStack {
                     Text("How does this work")

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OverviewView: View {
+    @ObservedObject var viewModel: OverviewViewModel
     var extraTypes = ["Dairy", "Soy", "Oats"]
 
     var body: some View {
@@ -84,6 +85,6 @@ struct OverviewView: View {
 
 struct OverviewView_Previews: PreviewProvider {
     static var previews: some View {
-        OverviewView()
+        OverviewView(viewModel: OverviewViewModel(coffeeMachine: CoffeeMachine.example))
     }
 }
