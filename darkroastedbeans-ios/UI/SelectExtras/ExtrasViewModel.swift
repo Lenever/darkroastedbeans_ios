@@ -25,6 +25,26 @@ final class ExtrasViewModel: ObservableObject {
         return extras
     }
     
+    var milkOptions: [String] {
+        var options: [String] = []
+        
+        for extra in coffeeMachine.extras[1].subselections {
+            options.append(extra.name)
+        }
+        
+        return options
+    }
+    
+    var sugarOptions: [String] {
+        var options: [String] = []
+        
+        for extra in coffeeMachine.extras[0].subselections {
+            options.append(extra.name)
+        }
+        
+        return options
+    }
+    
     init(coffeeMachine: CoffeeMachine, selectedCoffeeType: CoffeeType) {
         self.coffeeMachine = coffeeMachine
         self.selectedCoffeeType = selectedCoffeeType

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExtrasCellView: View {
     var extra: String
-    @State var isChecked = true
+    @State var isChecked = false
     
     var body: some View {
         Button(action:{

@@ -10,7 +10,7 @@ import SwiftUI
 struct ExtraDetailsView: View {
     @State var showDetails = false
     var extra: String
-    var extraTypes = ["Dairy", "Soy", "Oats"]
+    var extraTypes: [String]
     
     var body: some View {
         VStack {
@@ -47,7 +47,7 @@ struct ExtraDetailsView: View {
 
 struct ExtraDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ExtraDetailsView(extra: "Milk")
+        ExtraDetailsView(extra: "Milk", extraTypes: ["Dairy", "Soy", "Oats"])
             .previewLayout(.sizeThatFits)
     }
 }

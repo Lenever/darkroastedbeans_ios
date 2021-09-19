@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExtrasView: View {
     @ObservedObject var viewModel: ExtrasViewModel
-    var extras = ["Milk", "Sugar"]
+//    var extras = ["Milk", "Sugar"]
     
     var body: some View {
         VStack {
@@ -17,8 +17,11 @@ struct ExtrasView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
-                    ForEach(extras, id: \.self) { extra in
-                        ExtraDetailsView(extra: extra)
+                    ForEach(viewModel.coffeeExtras, id: \.self) { coffeeExtra in
+                        ExtraDetailsView(
+                            extra: coffeeExtra.contains("milk") ? "Milk" : "Sugar",
+                            extraTypes: coffeeExtra.contains("milk") ? viewModel.milkOptions : viewModel.sugarOptions
+                        )
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
