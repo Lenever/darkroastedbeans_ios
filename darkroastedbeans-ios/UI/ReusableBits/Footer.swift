@@ -1,36 +1,33 @@
 //
-//  CellView.swift
+//  Footer.swift
 //  darkroastedbeans-ios
 //
-//  Created by Ikechukwu Onuorah on 18/09/2021.
+//  Created by Ikechukwu Onuorah on 19/09/2021.
 //
 
 import SwiftUI
 
-struct CellView: View {
-    var itemName: String
+struct Footer: View {
+    var footer: String
     
     var body: some View {
         HStack {
-            Image("lungo")
-                .padding(.leading, 25)
-            
-            Text(itemName)
+            Text(footer)
+                .font(.system(size: 18, weight: .bold))
                 .padding()
             
             Spacer()
         }
-        .frame(height: 90
-        )
+        .frame(height: 90)
         .foregroundColor(.white)
         .background(Color("lemonGreen"))
         .cornerRadius(5)
     }
 }
 
-struct CellView_Previews: PreviewProvider {
+struct Footer_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(itemName: "Lungo")
+        Footer(footer: "Brew your coffee")
             .previewLayout(.sizeThatFits)
     }
 }

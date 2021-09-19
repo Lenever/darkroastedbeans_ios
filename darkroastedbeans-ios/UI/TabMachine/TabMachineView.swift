@@ -17,6 +17,7 @@ struct TabMachineView: View {
                     HStack {
                         Text("Dark Roasted Beans")
                             .font(.system(size: 16, weight: .bold))
+                            .padding(.vertical, 5)
                         
                         Spacer()
                     }
@@ -33,9 +34,11 @@ struct TabMachineView: View {
                 
                 Spacer()
                 
-                Image("coffeeMachine")
-                    .resizable()
-                    .scaledToFit()
+                NavigationLink(destination: SelectStyleView()) {
+                    Image("coffeeMachine")
+                        .resizable()
+                        .scaledToFit()
+                }
                 
                 
                 HStack {

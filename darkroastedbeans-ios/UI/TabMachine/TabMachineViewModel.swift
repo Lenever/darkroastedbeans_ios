@@ -31,7 +31,6 @@ final class TabMachineViewModel: ObservableObject {
                   receiveValue: {
                     self.coffeeMachine = $0
                     print($0)
-                    print(self.coffeeMachine)
                   })
     }
 }

@@ -12,22 +12,9 @@ struct OverviewView: View {
 
     var body: some View {
         VStack {
+            Header(header: "Overview")
+            
             VStack {
-                HStack {
-                    Text("Brew with Lex")
-                        .font(.system(size: 16, weight: .bold))
-                    
-                    Spacer()
-                }
-                
-                HStack {
-                    Text("Overview")
-                        .font(.system(size: 24, weight: .regular))
-                    
-                    Spacer()
-                }
-                .padding(.bottom)
-                
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
                         OverviewCellView(itemName: "Lungo")
@@ -71,26 +58,20 @@ struct OverviewView: View {
                         .padding(.horizontal, 25)
                     }
                 }
-                .padding(.vertical)
-                .background(Color("lemonGreen"))
-                .cornerRadius(5)
-                
-                Spacer()
-                
-                HStack {
-                    Text("Brew your coffee")
-                        .font(.system(size: 18, weight: .bold))
-                        .padding()
-                    
-                    Spacer()
-                }
-                .frame(height: 90)
-                .foregroundColor(.white)
                 .background(Color("lemonGreen"))
                 .cornerRadius(5)
             }
-            .padding()
+            .padding(.horizontal)
+            
+            Spacer()
+            
+            Footer(footer: "Brew your coffee")
+                .padding()
+                .padding(.bottom, 40)
         }
+        .foregroundColor(.white)
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
     
     private var divider: some View {

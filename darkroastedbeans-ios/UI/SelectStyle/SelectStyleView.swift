@@ -11,35 +11,26 @@ struct SelectStyleView: View {
     var coffeeTypes = ["Lungo", "Cappuccino", "Espresso"]
     
     var body: some View {
-        VStack {
-            VStack {
-                HStack {
-                    Text("Brew with Lex")
-                        .font(.system(size: 16, weight: .bold))
-                    
-                    Spacer()
-                }
-                
-                HStack {
-                    Text("Select your style")
-                        .font(.system(size: 24, weight: .regular))
-                    
-                    Spacer()
-                }
-            }
-            .padding()
+        VStack {            
+            Header(header: "Select your style")
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
                     ForEach(coffeeTypes, id: \.self) { coffee in
-                        CellView(itemName: coffee)
+                        NavigationLink(destination: SelectSizeView()) {
+                            CellView(itemName: coffee)
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
+            .padding(.horizontal)
             
             Spacer()
         }
+        .foregroundColor(.white)
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
 }
 

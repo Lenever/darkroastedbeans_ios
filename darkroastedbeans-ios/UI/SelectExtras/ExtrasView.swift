@@ -12,22 +12,7 @@ struct ExtrasView: View {
     
     var body: some View {
         VStack {
-            VStack {
-                HStack {
-                    Text("Brew with Lex")
-                        .font(.system(size: 16, weight: .bold))
-                    
-                    Spacer()
-                }
-                
-                HStack {
-                    Text("Select your extra's")
-                        .font(.system(size: 24, weight: .regular))
-                    
-                    Spacer()
-                }
-            }
-            .padding()
+            Header(header: "Select your extra's")
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
@@ -38,7 +23,18 @@ struct ExtrasView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(.horizontal)
+            
+            Spacer()
+            
+            NavigationLink(destination: OverviewView()) {
+                Footer(footer: "Confrim your coffee")
+            }
+            .padding()
+            .padding(.bottom, 100)
         }
+        .foregroundColor(.white)
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
 }
 
