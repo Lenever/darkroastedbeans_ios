@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabMachineView: View {
     @ObservedObject var viewModel = TabMachineViewModel()
+    @StateObject var coffeeChoices = CoffeeChoices()
 
     var body: some View {
         NavigationView {
@@ -34,7 +35,14 @@ struct TabMachineView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: SelectStyleView(viewModel: SelectStyleViewModel(coffeeMachine: viewModel.coffeeMachine ?? CoffeeMachine.example))) {
+                NavigationLink(
+                    destination: SelectStyleView(
+                        viewModel: SelectStyleViewModel(
+                            coffeeMachine: viewModel.coffeeMachine ?? CoffeeMachine.example
+//                            coffeeChoices: self.coffeeChoices
+                        )
+                    )
+                ) {
                     Image("coffeeMachine")
                         .resizable()
                         .scaledToFit()
@@ -54,6 +62,7 @@ struct TabMachineView: View {
             .navigationBarHidden(true)
             .ignoresSafeArea()
         }
+        .environmentObject(coffeeChoices)
     }
 }
 

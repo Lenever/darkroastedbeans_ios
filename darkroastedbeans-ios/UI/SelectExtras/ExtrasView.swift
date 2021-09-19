@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExtrasView: View {
     @ObservedObject var viewModel: ExtrasViewModel
-//    var extras = ["Milk", "Sugar"]
+    @EnvironmentObject var coffeeChoices: CoffeeChoices
     
     var body: some View {
         VStack {

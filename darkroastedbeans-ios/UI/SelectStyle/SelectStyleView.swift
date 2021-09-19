@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SelectStyleView: View {
     @ObservedObject var viewModel: SelectStyleViewModel
-        
+    @EnvironmentObject var coffeeChoices: CoffeeChoices
+    @State var choiceSelected = false
+    
     var body: some View {
         VStack {            
             Header(header: "Select your style")
@@ -17,15 +19,23 @@ struct SelectStyleView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
                     ForEach(viewModel.coffeeMachine.types) { coffeeType in
-                        NavigationLink(
-                            destination: SelectSizeView(
-                                viewModel: SelectSizeViewModel(
-                                    coffeeMachine: viewModel.coffeeMachine,
-                                    selectedCoffeeType: coffeeType
-                                )
-                            )
-                        ) {
-                            CellView(itemName: coffeeType.name)
+                        Button(action: {
+                            self.coffeeChoices.coffeeType = coffeeType.name
+                            print(self.coffeeChoices.coffeeType, self.coffeeChoices.coffeeSize, "<<<>>>")
+                            self.choiceSelected = true
+                        }) {
+                            NavigationLink(
+                                destination: SelectSizeView(
+                                    viewModel: SelectSizeViewModel(
+                                        coffeeMachine: viewModel.coffeeMachine,
+                                        selectedCoffeeType: coffeeType
+                                    )
+                                ),
+                                isActive: $choiceSelected
+                            )  {
+                                CellView(itemName: coffeeType.name)
+                            }
+                            .disabled(true)
                         }
                     }
                 }

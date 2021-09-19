@@ -10,6 +10,7 @@ import Foundation
 final class SelectSizeViewModel: ObservableObject {
     @Published var coffeeMachine: CoffeeMachine
     @Published var selectedCoffeeType: CoffeeType
+//    var coffeeChoices: CoffeeChoices
     
     var coffeeSizes: [String] {
         var sizes: [String] = []
@@ -25,8 +26,13 @@ final class SelectSizeViewModel: ObservableObject {
         return sizes
     }
     
-    init(coffeeMachine: CoffeeMachine, selectedCoffeeType: CoffeeType) {
+    init(
+        coffeeMachine: CoffeeMachine,
+        selectedCoffeeType: CoffeeType
+//        coffeeChoices: CoffeeChoices
+    ) {
         self.coffeeMachine = coffeeMachine
         self.selectedCoffeeType = selectedCoffeeType
+//        self.coffeeChoices = coffeeChoices
     }
 }
