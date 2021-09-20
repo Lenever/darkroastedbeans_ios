@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ExtraDetailsView: View {
+    @EnvironmentObject var coffeeChoices: CoffeeChoices
     @State var showDetails = false
     var extra: String
     var extraTypes: [String]
@@ -29,7 +30,7 @@ struct ExtraDetailsView: View {
                             
                             VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
                                 ForEach(extraTypes, id: \.self) { extra in
-                                    ExtrasCellView(extra: extra)
+                                    ExtrasCellView(isChecked: coffeeChoices.mixedExtras?.contains(extra) ?? false, extra: extra)
                                 }
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)

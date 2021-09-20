@@ -20,6 +20,7 @@ struct SelectStyleView: View {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
                     ForEach(viewModel.coffeeMachine.types) { coffeeType in
                         Button(action: {
+                            self.coffeeChoices.selectedCoffeeType = coffeeType
                             self.coffeeChoices.coffeeType = coffeeType.name
                             print(self.coffeeChoices.coffeeType, self.coffeeChoices.coffeeSize, "<<<>>>")
                             self.choiceSelected = true

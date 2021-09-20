@@ -9,13 +9,10 @@ import Foundation
 
 final class SelectStyleViewModel: ObservableObject {
     @Published var coffeeMachine: CoffeeMachine
-//    var coffeeChoices: CoffeeChoices
     
     init(
         coffeeMachine: CoffeeMachine
-//        coffeeChoices: CoffeeChoices
     ) {
         self.coffeeMachine = coffeeMachine
-//        self.coffeeChoices = coffeeChoices
     }
 }

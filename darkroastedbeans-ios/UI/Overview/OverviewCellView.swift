@@ -7,8 +7,14 @@
 
 import SwiftUI
 
-struct OverviewCellView: View {
+struct OverviewCellView<Edit: View>: View {
     var itemName: String
+    var edit: Edit
+    
+    init(itemName: String, @ViewBuilder edit: () -> Edit) {
+        self.itemName = itemName
+        self.edit = edit()
+    }
 
     var body: some View {
         HStack {
@@ -20,12 +26,8 @@ struct OverviewCellView: View {
             
             Spacer()
             
-            Button(action: {
-                
-            }) {
-                Text("Edit")
-                    .padding(.horizontal, 25)
-            }
+            edit
+                .padding(.horizontal, 25)
         }
         .frame(height: 50)
         .foregroundColor(.white)
@@ -36,7 +38,9 @@ struct OverviewCellView: View {
 
 struct OverviewCellView_Previews: PreviewProvider {
     static var previews: some View {
-        OverviewCellView(itemName: "Lungo")
-            .previewLayout(.sizeThatFits)
+        OverviewCellView(itemName: "Lungo") {
+            EmptyView()
+        }
+        .previewLayout(.sizeThatFits)
     }
 }

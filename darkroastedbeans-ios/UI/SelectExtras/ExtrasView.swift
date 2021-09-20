@@ -30,7 +30,14 @@ struct ExtrasView: View {
             
             Spacer()
             
-            NavigationLink(destination: OverviewView(viewModel: OverviewViewModel(coffeeMachine: viewModel.coffeeMachine))) {
+            NavigationLink(
+                destination: OverviewView(
+                    viewModel: OverviewViewModel(
+                        coffeeMachine: viewModel.coffeeMachine,
+                        coffeeChoices: self.coffeeChoices
+                    )
+                )
+            ) {
                 Footer(footer: "Confrim your coffee")
             }
             .padding()

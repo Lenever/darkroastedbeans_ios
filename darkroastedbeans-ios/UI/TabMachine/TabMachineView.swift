@@ -39,7 +39,6 @@ struct TabMachineView: View {
                     destination: SelectStyleView(
                         viewModel: SelectStyleViewModel(
                             coffeeMachine: viewModel.coffeeMachine ?? CoffeeMachine.example
-//                            coffeeChoices: self.coffeeChoices
                         )
                     )
                 ) {

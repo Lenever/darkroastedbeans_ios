@@ -9,26 +9,26 @@ import SwiftUI
 
 struct ExtrasCellView: View {
     @EnvironmentObject var coffeeChoices: CoffeeChoices
-    var extra: String
     @State var isChecked = false
+    var extra: String
     
     var body: some View {
         Button(action:{
             isChecked.toggle()
             if isChecked {
-                if coffeeChoices.milkExtra != nil {
-                    coffeeChoices.milkExtra?.append(extra)
+                if coffeeChoices.mixedExtras != nil {
+                    coffeeChoices.mixedExtras?.append(extra)
                 } else {
-                    coffeeChoices.milkExtra = [extra]
+                    coffeeChoices.mixedExtras = [extra]
                 }
             } else {
-                guard var extras = coffeeChoices.milkExtra else { return }
+                guard var extras = coffeeChoices.mixedExtras else { return }
                 if let index = extras.firstIndex(of: extra) {
                     extras.remove(at: index)
-                    coffeeChoices.milkExtra = extras
+                    coffeeChoices.mixedExtras = extras
                 }
             }
-            print(coffeeChoices.milkExtra, "|||")
+            print(coffeeChoices.mixedExtras, "|||")
         }) {
             HStack {
                 Text(extra)
