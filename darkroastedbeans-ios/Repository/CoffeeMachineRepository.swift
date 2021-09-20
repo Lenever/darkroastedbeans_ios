@@ -19,9 +19,8 @@ enum APIPath: String {
 
 extension CoffeeMachineRepository {
     static func request(_ path: APIPath) -> AnyPublisher<CoffeeMachine, Error> {
-        guard var components = URLComponents(url: baseUrl.appendingPathComponent(path.rawValue), resolvingAgainstBaseURL: true)
+        guard let components = URLComponents(url: baseUrl.appendingPathComponent(path.rawValue), resolvingAgainstBaseURL: true)
             else { fatalError("Couldn't create URLComponents") }
-//        components.queryItems = [URLQueryItem(name: "api_key", value: "your_api_key_here")]
         
         let request = URLRequest(url: components.url!)
         

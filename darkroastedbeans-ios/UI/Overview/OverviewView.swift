@@ -10,114 +10,111 @@ import SwiftUI
 struct OverviewView: View {
     @ObservedObject var viewModel: OverviewViewModel
     @EnvironmentObject var coffeeChoices: CoffeeChoices
-    var extraTypes = ["Dairy", "Soy", "Oats"]
-
+    
     var body: some View {
         VStack {
             Header(header: "Overview")
             
             VStack {
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
-                        if let coffeeType = viewModel.coffeeChoices.coffeeType {
-                            OverviewCellView(itemName: coffeeType) {
-                                NavigationLink(
-                                    destination: SelectStyleView(
-                                        viewModel: SelectStyleViewModel(
-                                            coffeeMachine: viewModel.coffeeMachine 
-                                        )
+                VStack {
+                    if let coffeeType = viewModel.coffeeChoices.coffeeType {
+                        OverviewCellView(itemName: coffeeType) {
+                            NavigationLink(
+                                destination: SelectStyleView(
+                                    viewModel: SelectStyleViewModel(
+                                        coffeeMachine: viewModel.coffeeMachine
                                     )
-                                ) {
-                                    Text("Edit")
-                                }
+                                )
+                            ) {
+                                Text("Edit")
                             }
-                            
-                            divider
-                        }
-                        
-                        if let coffeeSize = viewModel.coffeeChoices.coffeeSize {
-                            OverviewCellView(itemName: coffeeSize) {
-                                NavigationLink(
-                                    destination: SelectSizeView(
-                                        viewModel: SelectSizeViewModel(
-                                            coffeeMachine: viewModel.coffeeMachine,
-                                            selectedCoffeeType: coffeeChoices.selectedCoffeeType ?? CoffeeType.example
-                                        )
-                                    )
-                                )  {
-                                    Text("Edit")
-                                }
-                            }
-                            
-                            divider
-                        }
-                        
-                        if viewModel.milkExtras.count > 0 {
-                            OverviewCellView(itemName: "Milk") {
-                                NavigationLink(
-                                    destination: ExtrasView(
-                                        viewModel: ExtrasViewModel(
-                                            coffeeMachine: viewModel.coffeeMachine,
-                                            selectedCoffeeType: coffeeChoices.selectedCoffeeType ?? CoffeeType.example
-                                        )
-                                    )
-                                ) {
-                                    Text("Edit")
-                                }
-                            }
-                            
-                            divider
-                                .padding(.bottom, 5)
-                            
-                            VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
-                                ForEach(viewModel.milkExtras, id: \.self) { extra in
-                                    ExtrasCellView(isChecked: true, extra: extra)
-                                        .disabled(true)
-                                }
-                            }
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 25)
-                            
-                            divider
-                                .padding(.top, 5)
-                        }
-                        
-                        if viewModel.sugarExtras.count > 0 {
-                            OverviewCellView(itemName: "Sugar") {
-                                NavigationLink(
-                                    destination: ExtrasView(
-                                        viewModel: ExtrasViewModel(
-                                            coffeeMachine: viewModel.coffeeMachine,
-                                            selectedCoffeeType: coffeeChoices.selectedCoffeeType ?? CoffeeType.example
-                                        )
-                                    )
-                                ) {
-                                    Text("Edit")
-                                }
-                            }
-                            
-                            VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
-                                Divider()
-                                    .frame(height: 1)
-                                    .background(Color.white)
-                                
-                                ForEach(viewModel.sugarExtras, id: \.self) { extra in
-                                    ExtrasCellView(isChecked: true, extra: extra)
-                                        .disabled(true)
-                                }
-                            }
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 25)
                         }
                     }
-                    .padding(.top)
+                    
+                    if let coffeeSize = viewModel.coffeeChoices.coffeeSize {
+                        divider
+                        
+                        OverviewCellView(itemName: coffeeSize) {
+                            NavigationLink(
+                                destination: SelectSizeView(
+                                    viewModel: SelectSizeViewModel(
+                                        coffeeMachine: viewModel.coffeeMachine,
+                                        selectedCoffeeType: coffeeChoices.selectedCoffeeType ?? CoffeeType.example
+                                    )
+                                )
+                            )  {
+                                Text("Edit")
+                            }
+                        }
+                    }
+                    
+                    if viewModel.milkExtras.count > 0 {
+                        divider
+                        
+                        OverviewCellView(itemName: "Milk") {
+                            NavigationLink(
+                                destination: ExtrasView(
+                                    viewModel: ExtrasViewModel(
+                                        coffeeMachine: viewModel.coffeeMachine,
+                                        selectedCoffeeType: coffeeChoices.selectedCoffeeType ?? CoffeeType.example
+                                    )
+                                )
+                            ) {
+                                Text("Edit")
+                            }
+                        }
+                        
+                        divider
+                            .padding(.bottom, 5)
+                        
+                        VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
+                            ForEach(viewModel.milkExtras, id: \.self) { extra in
+                                ExtrasCellView(isChecked: true, extra: extra)
+                                    .disabled(true)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 25)
+                    }
+                    
+                    if viewModel.sugarExtras.count > 0 {
+                        divider
+                            .padding(.top, 5)
+                        
+                        OverviewCellView(itemName: "Sugar") {
+                            NavigationLink(
+                                destination: ExtrasView(
+                                    viewModel: ExtrasViewModel(
+                                        coffeeMachine: viewModel.coffeeMachine,
+                                        selectedCoffeeType: coffeeChoices.selectedCoffeeType ?? CoffeeType.example
+                                    )
+                                )
+                            ) {
+                                Text("Edit")
+                            }
+                        }
+                        
+                        VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
+                            Divider()
+                                .frame(height: 1)
+                                .background(Color.white)
+                            
+                            ForEach(viewModel.sugarExtras, id: \.self) { extra in
+                                ExtrasCellView(isChecked: true, extra: extra)
+                                    .disabled(true)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 25)
+                    }
                 }
+                .padding(.vertical)
                 .background(Color("lemonGreen"))
                 .cornerRadius(5)
-                
-                Spacer()
             }
             .padding(.horizontal)
+            
+            Spacer()
             
             Footer(footer: "Brew your coffee")
                 .padding()
