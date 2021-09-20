@@ -13,13 +13,6 @@ This is a mobile application where you can brew your coffee just the way you lik
 - User can select extras from the available list for each coffee type
 - User can see an overview of all their choices and make changes if needed
 
-https://drive.google.com/file/d/1m0-5XzNTtl6BgLy2n3Frc-oKVp-CRcpw/view?usp=sharing
-https://drive.google.com/file/d/1RyOKRLfldoMSDOsYUkPCnq3IJ5i2flBC/view?usp=sharing
-https://drive.google.com/file/d/1QrtaMzgGVbzXIC1hvjOrY3rqA77eAyBE/view?usp=sharing
-https://drive.google.com/file/d/1_ngH_vN88gkNU6tJvu0qPeEUNiDyai21/view?usp=sharing
-https://drive.google.com/file/d/1xZwCIJsT3mrfH2R359GnQEZdflW359o7/view?usp=sharing
-https://drive.google.com/file/d/1D6j_tPElGFLMkQD4mSzXMeOE5eLfhmbv/view?usp=sharing
-
 <p float = "left">
 <img src="https://drive.google.com/uc?export=view&id=1m0-5XzNTtl6BgLy2n3Frc-oKVp-CRcpw" width = "300" >
 <img src="https://drive.google.com/uc?export=view&id=1RyOKRLfldoMSDOsYUkPCnq3IJ5i2flBC" width = "300" >
