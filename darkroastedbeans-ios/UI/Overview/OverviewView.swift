@@ -13,7 +13,7 @@ struct OverviewView: View {
     
     var body: some View {
         VStack {
-            Header(header: "Overview")
+            Header(header: OverviewConstants.title)
             
             VStack {
                 VStack {
@@ -26,7 +26,7 @@ struct OverviewView: View {
                                     )
                                 )
                             ) {
-                                Text("Edit")
+                                Text(OverviewConstants.editButtonTitle)
                             }
                         }
                     }
@@ -43,7 +43,7 @@ struct OverviewView: View {
                                     )
                                 )
                             )  {
-                                Text("Edit")
+                                Text(OverviewConstants.editButtonTitle)
                             }
                         }
                     }
@@ -51,7 +51,7 @@ struct OverviewView: View {
                     if viewModel.milkExtras.count > 0 {
                         divider
                         
-                        OverviewCellView(itemName: "Milk") {
+                        OverviewCellView(itemName: OverviewConstants.milk) {
                             NavigationLink(
                                 destination: ExtrasView(
                                     viewModel: ExtrasViewModel(
@@ -60,7 +60,7 @@ struct OverviewView: View {
                                     )
                                 )
                             ) {
-                                Text("Edit")
+                                Text(OverviewConstants.editButtonTitle)
                             }
                         }
                         
@@ -81,7 +81,7 @@ struct OverviewView: View {
                         divider
                             .padding(.top, 5)
                         
-                        OverviewCellView(itemName: "Sugar") {
+                        OverviewCellView(itemName: OverviewConstants.sugar) {
                             NavigationLink(
                                 destination: ExtrasView(
                                     viewModel: ExtrasViewModel(
@@ -90,7 +90,7 @@ struct OverviewView: View {
                                     )
                                 )
                             ) {
-                                Text("Edit")
+                                Text(OverviewConstants.editButtonTitle)
                             }
                         }
                         
@@ -109,14 +109,14 @@ struct OverviewView: View {
                     }
                 }
                 .padding(.vertical)
-                .background(Color("lemonGreen"))
+                .background(Color(FooterConstants.backgroundColor))
                 .cornerRadius(5)
             }
             .padding(.horizontal)
             
             Spacer()
             
-            Footer(footer: "Brew your coffee")
+            Footer(footer: OverviewConstants.footerTitle)
                 .padding()
                 .padding(.bottom, 40)
         }

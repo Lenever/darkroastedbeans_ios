@@ -34,7 +34,7 @@ struct Header: View {
 
 struct Header_Previews: PreviewProvider {
     static var previews: some View {
-        Header(header: "Select your style")
+        Header(header: SelectStyleConstants.title)
             .previewLayout(.sizeThatFits)
     }
 }

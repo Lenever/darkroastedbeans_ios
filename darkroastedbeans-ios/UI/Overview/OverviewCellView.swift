@@ -31,14 +31,14 @@ struct OverviewCellView<Edit: View>: View {
         }
         .frame(height: 50)
         .foregroundColor(.white)
-        .background(Color("lemonGreen"))
+        .background(Color(FooterConstants.backgroundColor))
         .cornerRadius(10)
     }
 }
 
 struct OverviewCellView_Previews: PreviewProvider {
     static var previews: some View {
-        OverviewCellView(itemName: "Lungo") {
+        OverviewCellView(itemName: CoffeeType.example.name) {
             EmptyView()
         }
         .previewLayout(.sizeThatFits)

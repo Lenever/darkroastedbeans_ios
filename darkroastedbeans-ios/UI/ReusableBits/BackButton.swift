@@ -15,10 +15,10 @@ struct BackButton: View {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image(systemName: "chevron.left")
+                Image(systemName: HeaderConstants.backArrow)
                     .aspectRatio(contentMode: .fit)
                 
-                Text("Brew with Lex")
+                Text(HeaderConstants.title)
                     .font(.system(size: 16, weight: .bold))
             }
             .padding(.vertical, 5)

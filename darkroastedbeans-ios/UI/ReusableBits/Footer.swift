@@ -20,14 +20,14 @@ struct Footer: View {
         }
         .frame(height: 90)
         .foregroundColor(.white)
-        .background(Color("lemonGreen"))
+        .background(Color(FooterConstants.backgroundColor))
         .cornerRadius(5)
     }
 }
 
 struct Footer_Previews: PreviewProvider {
     static var previews: some View {
-        Footer(footer: "Brew your coffee")
+        Footer(footer: OverviewConstants.footerTitle)
             .previewLayout(.sizeThatFits)
     }
 }

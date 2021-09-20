@@ -14,7 +14,7 @@ struct SelectSizeView: View {
     
     var body: some View {
         VStack {
-            Header(header: "Select your size")
+            Header(header: SelectSizeConstants.title)
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {

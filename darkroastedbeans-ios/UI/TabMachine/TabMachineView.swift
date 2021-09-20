@@ -16,7 +16,7 @@ struct TabMachineView: View {
             VStack {
                 VStack {
                     HStack {
-                        Text("Dark Roasted Beans")
+                        Text(TabMachineConstants.title)
                             .font(.system(size: 16, weight: .bold))
                             .padding(.vertical, 5)
                         
@@ -24,7 +24,7 @@ struct TabMachineView: View {
                     }
                     
                     HStack {
-                        Text("Tab the machine to start")
+                        Text(TabMachineConstants.subTitle)
                             .font(.system(size: 24, weight: .regular))
                         
                         Spacer()
@@ -42,13 +42,13 @@ struct TabMachineView: View {
                         )
                     )
                 ) {
-                    Image("coffeeMachine")
+                    Image(TabMachineConstants.coffeeMachine)
                         .resizable()
                         .scaledToFit()
                 }
                 
                 HStack {
-                    Text("How does this work")
+                    Text(TabMachineConstants.help)
                         .underline()
                         .padding()
                     

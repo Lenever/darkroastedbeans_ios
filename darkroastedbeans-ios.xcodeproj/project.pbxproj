@@ -15,6 +15,7 @@
 		046192F526F74A4D00DBBB0C /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046192F426F74A4D00DBBB0C /* OverviewViewModel.swift */; };
 		046192F726F7A00800DBBB0C /* CoffeeChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046192F626F7A00800DBBB0C /* CoffeeChoices.swift */; };
 		046192F926F8576600DBBB0C /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046192F826F8576600DBBB0C /* ImageHelper.swift */; };
+		046192FB26F885D500DBBB0C /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046192FA26F885D500DBBB0C /* StringConstants.swift */; };
 		04C07F1B26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C07F1A26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift */; };
 		04C07F1F26F5D452000F25E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C07F1E26F5D452000F25E9 /* Assets.xcassets */; };
 		04C07F2226F5D452000F25E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C07F2126F5D452000F25E9 /* Preview Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		046192F426F74A4D00DBBB0C /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		046192F626F7A00800DBBB0C /* CoffeeChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChoices.swift; sourceTree = "<group>"; };
 		046192F826F8576600DBBB0C /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		046192FA26F885D500DBBB0C /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		04C07F1726F5D44F000F25E9 /* darkroastedbeans-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "darkroastedbeans-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C07F1A26F5D44F000F25E9 /* darkroastedbeans_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = darkroastedbeans_iosApp.swift; sourceTree = "<group>"; };
 		04C07F1E26F5D452000F25E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				04C07F1E26F5D452000F25E9 /* Assets.xcassets */,
 				04C07F2326F5D452000F25E9 /* Info.plist */,
 				04C07F2026F5D452000F25E9 /* Preview Content */,
+				046192FA26F885D500DBBB0C /* StringConstants.swift */,
 			);
 			path = "darkroastedbeans-ios";
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				04C07F6126F6715A000F25E9 /* APIClient.swift in Sources */,
 				04C07F6F26F67946000F25E9 /* Subselection.swift in Sources */,
 				046192F126F7495100DBBB0C /* SelectSizeViewModel.swift in Sources */,
+				046192FB26F885D500DBBB0C /* StringConstants.swift in Sources */,
 				046192ED26F7350000DBBB0C /* Footer.swift in Sources */,
 				046192F526F74A4D00DBBB0C /* OverviewViewModel.swift in Sources */,
 				04C07F7326F67C66000F25E9 /* TabMachineViewModel.swift in Sources */,

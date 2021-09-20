@@ -41,7 +41,7 @@ struct ExtrasCellView: View {
                     .padding()
             }
             .foregroundColor(.white)
-            .background(Color("darkLemonGreen"))
+            .background(Color(OverviewConstants.extraBackground))
             .cornerRadius(10)
         }
     }
@@ -49,7 +49,7 @@ struct ExtrasCellView: View {
 
 struct ExtrasCellView_Previews: PreviewProvider {
     static var previews: some View {
-        ExtrasCellView(extra: "Soy")
+        ExtrasCellView(extra: CoffeeType.example.name)
             .previewLayout(.sizeThatFits)
     }
 }

@@ -23,14 +23,14 @@ struct CellView: View {
         .frame(height: 90
         )
         .foregroundColor(.white)
-        .background(Color("lemonGreen"))
+        .background(Color(FooterConstants.backgroundColor))
         .cornerRadius(5)
     }
 }
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(itemName: "Lungo")
+        CellView(itemName: CoffeeType.example.name)
             .previewLayout(.sizeThatFits)
     }
 }

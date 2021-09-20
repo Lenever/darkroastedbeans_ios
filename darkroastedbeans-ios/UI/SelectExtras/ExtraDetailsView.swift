@@ -41,14 +41,14 @@ struct ExtraDetailsView: View {
                 }
             }
         }
-        .background(Color("lemonGreen"))
+        .background(Color(FooterConstants.backgroundColor))
         .cornerRadius(10)
     }
 }
 
 struct ExtraDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ExtraDetailsView(extra: "Milk", extraTypes: ["Dairy", "Soy", "Oats"])
+        ExtraDetailsView(extra: OverviewConstants.milk, extraTypes: ["Dairy", "Soy", "Oats"])
             .previewLayout(.sizeThatFits)
     }
 }

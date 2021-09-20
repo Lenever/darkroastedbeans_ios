@@ -13,13 +13,13 @@ struct ExtrasView: View {
     
     var body: some View {
         VStack {
-            Header(header: "Select your extra's")
+            Header(header: SelectExtrasConstants.title)
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: UIScreen.main.bounds.width <= 375 ? 10 : 24) {
                     ForEach(viewModel.coffeeExtras, id: \.self) { coffeeExtra in
                         ExtraDetailsView(
-                            extra: coffeeExtra.contains("milk") ? "Milk" : "Sugar",
+                            extra: coffeeExtra.contains("milk") ? OverviewConstants.milk : OverviewConstants.sugar,
                             extraTypes: coffeeExtra.contains("milk") ? viewModel.milkOptions : viewModel.sugarOptions
                         )
                     }
@@ -38,7 +38,7 @@ struct ExtrasView: View {
                     )
                 )
             ) {
-                Footer(footer: "Confrim your coffee")
+                Footer(footer: SelectExtrasConstants.footerTitle)
             }
             .padding()
             .padding(.bottom, 40)
