@@ -12,7 +12,7 @@ struct CellView: View {
     
     var body: some View {
         HStack {
-            Image("lungo")
+            Image(chooseImage(title: itemName))
                 .padding(.leading, 25)
             
             Text(itemName)
