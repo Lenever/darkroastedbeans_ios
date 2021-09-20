@@ -13,7 +13,7 @@ final class SelectSizeViewModel: ObservableObject {
     
     var coffeeSizes: [String] {
         var sizes: [String] = []
-        
+
         for sizeID in selectedCoffeeType.sizes {
             for size in coffeeMachine.sizes {
                 if sizeID == size.id {
@@ -21,7 +21,7 @@ final class SelectSizeViewModel: ObservableObject {
                 }
             }
         }
-        
+
         return sizes
     }
     

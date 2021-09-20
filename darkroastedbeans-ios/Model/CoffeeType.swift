@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - CoffeeTypes
-struct CoffeeType: Codable, Identifiable {
+struct CoffeeType: Codable, Identifiable, Hashable {
     static var example = CoffeeType(
         id: "60ba1a062e35f2d9c786c56d",
         name: "Ristretto",

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Header: View {
+    @Environment(\.colorScheme) var colorScheme
     var header: String
     
     var body: some View {
@@ -25,6 +26,7 @@ struct Header: View {
                 Spacer()
             }
         }
+        .foregroundColor(colorScheme == .dark ? .white : .black)
         .padding(.top, 50)
         .padding()
     }

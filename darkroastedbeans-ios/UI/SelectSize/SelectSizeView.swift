@@ -22,7 +22,6 @@ struct SelectSizeView: View {
                         Button(action: {
                             self.coffeeChoices.coffeeSize = coffeeSize
                             self.choiceSelected = true
-                            print(self.coffeeChoices.coffeeType, self.coffeeChoices.coffeeSize, "<<<>>>")
                         }) {
                             NavigationLink(
                                 destination: ExtrasView(

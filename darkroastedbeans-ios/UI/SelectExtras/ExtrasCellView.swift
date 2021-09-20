@@ -28,7 +28,6 @@ struct ExtrasCellView: View {
                     coffeeChoices.mixedExtras = extras
                 }
             }
-            print(coffeeChoices.mixedExtras, "|||")
         }) {
             HStack {
                 Text(extra)

@@ -21,7 +21,7 @@ final class ExtrasViewModel: ObservableObject {
                 }
             }
         }
-        
+
         return extras
     }
     

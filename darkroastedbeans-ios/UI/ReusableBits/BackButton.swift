@@ -17,7 +17,6 @@ struct BackButton: View {
             HStack {
                 Image(systemName: "chevron.left")
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.white)
                 
                 Text("Brew with Lex")
                     .font(.system(size: 16, weight: .bold))

@@ -24,7 +24,7 @@ struct OverviewView: View {
                                 NavigationLink(
                                     destination: SelectStyleView(
                                         viewModel: SelectStyleViewModel(
-                                            coffeeMachine: viewModel.coffeeMachine ?? CoffeeMachine.example
+                                            coffeeMachine: viewModel.coffeeMachine 
                                         )
                                     )
                                 ) {
